@@ -48,7 +48,7 @@ jobs:
           - arch: arm64
             runner: ${{ vars.CONTAINER_ARM64_RUNNER || 'blacksmith-8vcpu-ubuntu-2404-arm' }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -58,7 +58,7 @@ jobs:
           SOURCE_DATE_EPOCH="$(git show --no-patch --format=%ct "$SOURCE_SHA")"
           test -n "$SOURCE_DATE_EPOCH"
           printf 'SOURCE_DATE_EPOCH=%s\n' "$SOURCE_DATE_EPOCH" >> "$GITHUB_ENV"
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: "24.16.0"
       - name: Report native runner resources

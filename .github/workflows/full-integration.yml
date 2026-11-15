@@ -43,7 +43,7 @@ jobs:
       run_all: ${{ steps.select.outputs.run_all }}
       selected_lane: ${{ steps.select.outputs.selected_lane }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -126,7 +126,7 @@ jobs:
             profile: k3d
             timeout: 60
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -152,7 +152,7 @@ jobs:
     if: needs.preflight.outputs.run_all == 'true'
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -176,7 +176,7 @@ jobs:
       OCC_DOCKER_RUNTIME_IMAGE: ${{ vars.OCC_DOCKER_RUNTIME_IMAGE }}
       NODE_BASE_IMAGE: ${{ vars.NODE_BASE_IMAGE }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -202,7 +202,7 @@ jobs:
       OCC_TEST_KUBERNETES_AGENT_IMAGE: ${{ vars.OCC_TEST_KUBERNETES_AGENT_IMAGE }}
       NODE_BASE_IMAGE: ${{ vars.NODE_BASE_IMAGE }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -227,7 +227,7 @@ jobs:
       OCC_TEST_KUBERNETES_AGENT_IMAGE: ${{ vars.OCC_TEST_KUBERNETES_AGENT_IMAGE }}
       NODE_BASE_IMAGE: ${{ vars.NODE_BASE_IMAGE }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -254,7 +254,7 @@ jobs:
       OCC_TEST_PRODUCTION_NODE_IMAGE: ${{ vars.OCC_TEST_PRODUCTION_NODE_IMAGE }}
       NODE_BASE_IMAGE: ${{ vars.NODE_BASE_IMAGE }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -284,7 +284,7 @@ jobs:
       SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -309,7 +309,7 @@ jobs:
       OCC_TEST_CHATGPT_WORKSPACE_ID: ${{ vars.OCC_TEST_CHATGPT_WORKSPACE_ID }}
       OCC_TEST_CHATGPT_ADMIN_KEY_JSON: ${{ secrets.OCC_TEST_CHATGPT_ADMIN_KEY_JSON }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -344,7 +344,7 @@ jobs:
       OCC_TEST_OPENSHELL_SANDBOX_IMAGE: ${{ vars.OCC_TEST_OPENSHELL_SANDBOX_IMAGE }}
       OCC_TEST_OPENSHELL_SUPERVISOR_IMAGE: ${{ vars.OCC_TEST_OPENSHELL_SUPERVISOR_IMAGE }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -369,7 +369,7 @@ jobs:
       OCC_TEST_KUBERNETES_AGENT_IMAGE: ${{ vars.OCC_TEST_KUBERNETES_AGENT_IMAGE }}
       NODE_BASE_IMAGE: ${{ vars.NODE_BASE_IMAGE }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -387,7 +387,7 @@ jobs:
     if: inputs.lane == 'all' || inputs.lane == 'helper-timeout'
     timeout-minutes: 12
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -405,7 +405,7 @@ jobs:
     if: inputs.lane == 'logging-collector'
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -435,14 +435,14 @@ jobs:
       - logging-collector
     if: always()
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           pattern: full-results-*
           path: ${{ runner.temp }}/results
