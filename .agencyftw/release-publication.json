@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "release-publication-config",
+  "product": {
+    "id": "PirateSchool/openclaw-enterprise",
+    "profile": "infrastructure"
+  },
+  "versioning": {
+    "engine": "none"
+  },
+  "notes": {
+    "directory": "docs/releases/notes",
+    "defaultLocale": "en-US",
+    "locales": [
+      "en-US"
+    ],
+    "audiences": [
+      "github"
+    ]
+  },
+  "artifacts": {
+    "sourcePolicy": "exact"
+  },
+  "release": {
+    "mode": "none",
+    "reason": "No shared release writer is admitted for this repository; existing native operations retain their current ownership."
+  },
+  "publication": {
+    "mode": "disabled",
+    "targets": [],
+    "reason": "Shared publication is disabled: imported CLI, OCI and chart publishers admit only openclaw/openclaw-enterprise; this fork has no native publication authority."
+  }
+}
